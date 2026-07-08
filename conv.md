@@ -321,13 +321,16 @@ where:
 
 ## Restrictions
 
-See [Restrictions](#restrictions).
+See the restrictions defined in the real-number specification.
 
 ## Informal specification
 
 Operator **Conv** computes the convolution of the input tensor $X$ with the kernel $W$ and adds bias $B$ to produce output tensor $Y$.
 
 The computation follows IEEE754 floating-point arithmetic. Consequently, floating-point rounding, overflow, underflow, infinities and NaN values follow IEEE754 semantics.
+
+Apart from the IEEE754 floating-point semantics, the behaviour of the operator is identical to the real-number specification.
+
 
 
 ## Error conditions
@@ -362,7 +365,7 @@ Tensor $W$ is the convolution kernel.
 #### Constraints
 
 - `[C1]` <a id="C1fw"></a> Shape consistency
-  - Statement: see constraints on tensor $W$ in the real section.
+  - Statement: see constraints [<b><span style="font-family: 'Courier New', monospace">C1</span></b>](#C1rw), [<b><span style="font-family: 'Courier New', monospace">C2</span></b>](#C2rw), [<b><span style="font-family: 'Courier New', monospace">C3</span></b>](#C3rw), [<b><span style="font-family: 'Courier New', monospace">C4</span></b>](#C4rw) and [<b><span style="font-family: 'Courier New', monospace">C5</span></b>](#C5rw) on tensor $W$.
 - `[C2]` <a id="C2fw"></a> Type consistency
   - Statement: see constraint [<b><span style="font-family: 'Courier New', monospace">[C2]</span></b>](#C2fx) on tensor $X$.
 
@@ -373,7 +376,7 @@ Tensor $B$ is the optional bias.
 #### Constraints
 
 - `[C1]` <a id="C1fb"></a> Shape consistency
-  - Statement: see constraint on tensor $B$ in the real section.
+  - Statement: see constraint [<b><span style="font-family: 'Courier New', monospace">C1</span></b>](#C1rb) on tensor $B$.
 - `[C2]` <a id="C2fb"></a> Type consistency
   - Statement: see constraint [<b><span style="font-family: 'Courier New', monospace">[C2]</span></b>](#C2fx) on tensor $X$.
 
@@ -386,7 +389,7 @@ Tensor $Y$ is the output tensor of the convolution.
 #### Constraints
 
 - `[C1]` <a id="C1fy"></a> Shape consistency
-  - Statement: see constraint on tensor $Y$ in the real section.
+  - Statement: see constraint [<b><span style="font-family: 'Courier New', monospace">C1</span></b>](#C1ry) on tensor $Y$.
 - `[C2]` <a id="C2fy"></a> Type consistency
   - Statement: see constraint [<b><span style="font-family: 'Courier New', monospace">[C2]</span></b>](#C2fx) on tensor $X$.
 
